@@ -4,7 +4,7 @@ import { DataLayerOutput } from '../components';
 
 const Home: React.FC<{}> = () => {
   const {
-    deferredEvents: { done }
+    deferredEvents: { done },
   } = usePageContext();
 
   React.useEffect(() => {
@@ -31,7 +31,7 @@ export default withPageTracking(Home, {
   pageName: 'home',
   pageType: 'my details',
   deferredEvents: [0, 1, 2],
-  onTrack: (dataLayer) => {
+  onTrack: dataLayer => {
     console.info('tracked:', dataLayer);
-  }
+  },
 });
