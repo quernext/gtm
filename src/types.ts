@@ -38,7 +38,10 @@ export type DataLayerUpdateFn = (newDataLayer?: Partial<DataLayer>) => void;
 
 export type DeferredEvent = number | string;
 
-export type DeferredEventDoneFn = <T>(event: DeferredEvent, args?: T) => void;
+export type DeferredEventDoneFn = <T extends Partial<DataLayer>>(
+  event: DeferredEvent,
+  args?: T
+) => void;
 
 export type DeferredEventAddFn = (event: DeferredEvent) => void;
 
