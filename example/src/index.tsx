@@ -10,6 +10,7 @@ import store from './store';
 import Account from './pages/Account';
 import Blog from './pages/Blog';
 import Home from './pages/Home';
+import Todos from './pages/Todos';
 
 const App = () => (
   <Provider store={store}>
@@ -22,6 +23,9 @@ const App = () => (
                 <a href="/">Home</a>
               </li>
               <li className="menu__item">
+                <Link to="/todos">Todos</Link>
+              </li>
+              <li className="menu__item">
                 <Link to="/account">Account</Link>
               </li>
               <li className="menu__item">
@@ -32,6 +36,7 @@ const App = () => (
           <Route exact path="/" component={Home} />
           <Route path="/account" component={Account} />
           <Route path="/blog" component={Blog} />
+          <Route path="/todos" component={Todos} />
         </Router>
       </React.Fragment>
     </BaseProvider>

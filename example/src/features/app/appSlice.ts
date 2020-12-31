@@ -1,11 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../../store';
-
-export type AppState = {
-  pageLanguage: string;
-  senderCountry: string;
-  senderCountryIso: string;
-}
+import { AppState } from './types';
 
 const initialState: AppState = {
   pageLanguage: 'en',
@@ -17,6 +12,7 @@ const app = createSlice({
   name: '@@app',
   initialState,
   reducers: {},
+  extraReducers: {}
 });
 
 export const selectAppState = (state: RootState) => state.app;

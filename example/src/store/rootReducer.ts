@@ -1,8 +1,9 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import { app } from '../features';
+import { app, todos } from '../features';
 
 const rootReducer = combineReducers({
-  app
+  app,
+  todos,
 });
 
 export default rootReducer;
