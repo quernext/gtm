@@ -12,7 +12,7 @@ const DataLayerOutput = () => {
       <h3>DataLayer</h3>
       <hr />
       <p>
-        <strong>status:</strong> {isPending ? <span>Pending...</span> : <span>✅ data sent to google analytics</span>}
+        <strong>STATUS:</strong> {isPending ? <span>Pending...</span> : <span>✅ data sent to google analytics</span>}
       </p>
       <hr />
       <pre>{JSON.stringify(dataLayer, undefined, 4)}</pre>
